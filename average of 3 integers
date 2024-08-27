@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main() {
+  int m,n,b;
+  cin>>m;
+  cin>>n;
+  cin>>b;
+  double number= (m+n+b)/3.0;
+  cout<<"average: "<<number;
+  return 0;
+}
