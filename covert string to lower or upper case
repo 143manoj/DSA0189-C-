@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class StringConverter {
+public:
+    void convertToUpperCase(string &str) {
+        for (char &c : str) {
+            c = toupper(c);
+        }
+    }
+
+    void convertToLowerCase(string &str) {
+        for (char &c : str) {
+            c = tolower(c);
+        }
+    }
+};
+int main() {
+    StringConverter converter;
+    string input;
+    char choice;
+
+    cout << "Enter a string: "<<endl;
+    getline(cin, input);
+
+    cout << "Enter 'U' to convert to upper case or 'L' to convert to lower case: "<<endl;
+    cin >> choice;
+
+    if (choice == 'U' || choice == 'u') {
+        converter.convertToUpperCase(input);
+    } else if (choice == 'L' || choice == 'l') {
+        converter.convertToLowerCase(input);
+    } else {
+        cout << "Invalid choice!" << endl;
+        return 1;
+    }
+    
+
+    cout << "Converted string: " << input << endl;
+
+    return 0;
+    
+}
+
+
+
+
