@@ -1,0 +1,52 @@
+#include <iostream>
+
+class Animal {
+public:
+    void eat() {
+        std::cout << "Animal is eating." << std::endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void bark() {
+        std::cout << "Dog is barking." << std::endl;
+    }
+};
+class Cat : public Animal {
+public:
+    void meow() {
+        std::cout << "Cat is meowing." << std::endl;
+    }
+};
+
+class Fish : public Animal {
+public:
+    void swim() {
+        std::cout << "Fish is swimming." << std::endl;
+    }
+};
+class Bird : public Animal {
+public:
+    void fly() {
+        std::cout << "Bird is flying." << std::endl;
+    }
+};
+int main() {
+    Dog dog;
+    Cat cat;
+    Fish fish;
+    Bird bird;
+    dog.eat();
+    dog.bark();
+    std::cout << std::endl;
+    cat.eat();
+    cat.meow();
+    std::cout << std::endl;
+    fish.eat();
+    fish.swim();
+    std::cout << std::endl;
+    bird.eat();
+    bird.fly();
+    return 0;
+}
