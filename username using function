@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+bool validateUserName(const std::string &username, const std::string &reentered) {
+    return username == reentered;
+}
+
+int main() {
+    std::string username, reentered;
+    
+    std::cout << "Enter the user name: ";
+    std::cin >> username;
+    std::cout << "Reenter the user name: ";
+    std::cin >> reentered;
+
+    if (validateUserName(username, reentered))
+        std::cout << "User name is valid" << std::endl;
+    else
+        std::cout << "User name is Invalid" << std::endl;
+
+    return 0;
+}
