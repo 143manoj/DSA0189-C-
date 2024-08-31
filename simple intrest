@@ -1,0 +1,26 @@
+#include <iostream>
+
+float calculateInterest(float principal, int years, bool isSenior) {
+    float rate = isSenior ? 0.12 : 0.10;
+    return principal * rate * years;
+}
+
+int main() {
+    float principal;
+    int years;
+    char isSeniorChar;
+    bool isSenior;
+
+    std::cout << "Enter the principal amount: ";
+    std::cin >> principal;
+    std::cout << "Enter the no of years: ";
+    std::cin >> years;
+    std::cout << "Is customer senior citizen (y/n): ";
+    std::cin >> isSeniorChar;
+
+    isSenior = (isSeniorChar == 'y' || isSeniorChar == 'Y');
+    
+    std::cout << "Interest: " << calculateInterest(principal, years, isSenior) << std::endl;
+
+    return 0;
+}
